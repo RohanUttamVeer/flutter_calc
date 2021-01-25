@@ -1,9 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
+import 'package:math_expressions/math_expressions.dart';
 
 void main () => runApp(DemoCalculator());
 
@@ -38,7 +36,7 @@ class _DemoCalculator extends State<DemoCalculator>{
                   padding: const EdgeInsets.fromLTRB(0, 0, 28, 12),
 
                 child: Text(
-                  strExp=="" ? "Tap on the keypad to calc" :strExp,
+                  strExp=="" ? "Tap on the keypad to calculate" :strExp,
                 textAlign: TextAlign.right,
                   style: TextStyle(
                     fontSize: 22,
@@ -432,13 +430,14 @@ setState(() {
                     fontSize: 32, fontWeight: FontWeight.w400,
                   ),
                 ),
-                onPressed: (){
+                 onPressed: (){
                   Parser p = new Parser();
-                  ContextModel cm =  new ContextModel();
+                  ContextModel cm = new ContextModel();
                   Expression exp = p.parse(strResult);
                   setState(() {
+                    strResult = exp.evaluate(EvaluationType.REAL, cm).toString();
                   });
-                  strResult = exp.evaluate(EvaluationType.REAL, cm).toString();
+
                 },
               ),
             )
