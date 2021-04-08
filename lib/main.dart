@@ -34,7 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Text(
                     strExp == "" ? "Tap on the keypad to calculate" : strExp,
                     textAlign: TextAlign.right,
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w400, color: Colors.grey),
+                    style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.grey),
                   ),
                 ),
               ],
@@ -49,7 +52,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Text(
                     strResult,
                     textAlign: TextAlign.right,
-                    style: TextStyle(fontSize: 42, fontWeight: FontWeight.w400, color: Colors.deepPurple),
+                    style: TextStyle(
+                        fontSize: 42,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.deepPurple),
                   ),
                 ),
                 Padding(
@@ -102,10 +108,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     //7
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.all(32),
+                        padding: const EdgeInsets.all(12),
                         child: Text(
                           "7",
-                          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       onTap: () => updateExp("7"),
@@ -114,10 +123,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     //8
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.all(32),
+                        padding: const EdgeInsets.all(12),
                         child: Text(
                           "8",
-                          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       onTap: () => updateExp("8"),
@@ -126,10 +138,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     //9
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.all(32),
+                        padding: const EdgeInsets.all(12),
                         child: Text(
                           "9",
-                          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       onTap: () => updateExp("9"),
@@ -147,7 +162,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(32),
                         child: Text(
                           "4",
-                          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       onTap: () => updateExp("4"),
@@ -159,7 +177,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(32),
                         child: Text(
                           "5",
-                          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       onTap: () => updateExp("5"),
@@ -171,7 +192,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(32),
                         child: Text(
                           "6",
-                          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       onTap: () => updateExp("6"),
@@ -189,7 +213,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(32),
                         child: Text(
                           "1",
-                          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       onTap: () => updateExp("1"),
@@ -201,7 +228,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(32),
                         child: Text(
                           "2",
-                          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       onTap: () => updateExp("2"),
@@ -213,7 +243,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(32),
                         child: Text(
                           "3",
-                          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       onTap: () => updateExp("3"),
@@ -238,7 +271,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.all(22),
                       child: Text(
                         "%",
-                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: Colors.deepPurple),
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.deepPurple),
                       ),
                     ),
                     onTap: () => updateExp("/"),
@@ -250,7 +286,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.all(22),
                       child: Text(
                         "X",
-                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: Colors.deepPurple),
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.deepPurple),
                       ),
                     ),
                     onTap: () => updateExp("*"),
@@ -262,7 +301,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.all(22),
                       child: Text(
                         "-",
-                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: Colors.deepPurple),
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.deepPurple),
                       ),
                     ),
                     onTap: () => updateExp("-"),
@@ -274,7 +316,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.all(22),
                       child: Text(
                         "+",
-                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: Colors.deepPurple),
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.deepPurple),
                       ),
                     ),
                     onTap: () => updateExp("+"),
@@ -292,10 +337,13 @@ class _HomeScreenState extends State<HomeScreen> {
             //.
             InkWell(
               child: Padding(
-                padding: const EdgeInsets.all(32),
+                padding: const EdgeInsets.all(5),
                 child: Text(
                   ".",
-                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                  style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey),
                 ),
               ),
               onTap: () => updateExp("."),
@@ -304,10 +352,13 @@ class _HomeScreenState extends State<HomeScreen> {
             //0
             InkWell(
               child: Padding(
-                padding: const EdgeInsets.all(32),
+                padding: const EdgeInsets.all(5),
                 child: Text(
                   "0",
-                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.grey),
+                  style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey),
                 ),
               ),
               onTap: () => updateExp("0"),
@@ -315,7 +366,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
             //delete
             Padding(
-              padding: const EdgeInsets.all(32),
+              padding: const EdgeInsets.all(5),
               child: IconButton(
                 icon: Icon(
                   Icons.arrow_back,
@@ -323,7 +374,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 onPressed: () {
                   setState(() {
-                    if (strExp != null && strExp.length > 0) strExp = strExp.substring(0, strExp.length - 1);
+                    if (strExp != null && strExp.length > 0)
+                      strExp = strExp.substring(0, strExp.length - 1);
                   });
                 },
               ),
@@ -352,7 +404,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ContextModel cm = new ContextModel();
                   Expression exp = p.parse(strResult);
                   setState(() {
-                    strResult = exp.evaluate(EvaluationType.REAL, cm).toString();
+                    strResult =
+                        exp.evaluate(EvaluationType.REAL, cm).toString();
                   });
                 },
               ),
