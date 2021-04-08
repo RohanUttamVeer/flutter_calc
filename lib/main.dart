@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 10, 28, 12),
+                  padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
                   child: Text(
                     strExp == "" ? "Tap on the keypad to calculate" : strExp,
                     textAlign: TextAlign.right,
@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     //7
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(32),
                         child: Text(
                           "7",
                           style: TextStyle(
@@ -123,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     //8
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(32),
                         child: Text(
                           "8",
                           style: TextStyle(
@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     //9
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(32),
                         child: Text(
                           "9",
                           style: TextStyle(
@@ -384,6 +384,7 @@ class _HomeScreenState extends State<HomeScreen> {
             //=
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12),
+              // ignore: deprecated_member_use
               child: FlatButton(
                 padding: EdgeInsets.all(0),
                 color: Colors.deepPurple,
@@ -397,15 +398,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 onPressed: () {
-                  //Calculate everything here
-                  // Parse expression:
-                  Parser p = new Parser();
-                  // Bind variables:
-                  ContextModel cm = new ContextModel();
-                  Expression exp = p.parse(strResult);
-                  setState(() {
-                    strResult =
-                        exp.evaluate(EvaluationType.REAL, cm).toString();
+                    //Calculate everything here
+                    // Parse expression:
+                    Parser p = new Parser();
+                    // Bind variables:
+                    ContextModel cm = new ContextModel();
+                    Expression exp = p.parse(strResult);
+                    setState(() {
+                      strResult = exp.evaluate(EvaluationType.REAL, cm).toString();
                   });
                 },
               ),
@@ -419,6 +419,7 @@ class _HomeScreenState extends State<HomeScreen> {
   updateExp(String strValue) {
     setState(() {
       strExp = strExp + strValue;
+      strResult = strExp;
     });
   }
 }
